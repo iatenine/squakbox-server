@@ -8,6 +8,6 @@ public class SquakController {
 
     @GetMapping("/")
     public String getAllPosts(){
-        return "Hello from SquakBox";
+        return "Hello from SquakBox with failing tests";
     }
 }
