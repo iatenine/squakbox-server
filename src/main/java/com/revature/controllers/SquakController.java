@@ -21,7 +21,7 @@ public class SquakController {
     }
 
     @PostMapping("/")
-    public Squak postSquak(String s){
-        return squakService.postSquak("Post Test");
+    public Squak postSquak(@RequestBody Squak squak){
+        return squakService.postSquak(squak.getContent());
     }
 }
