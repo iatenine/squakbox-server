@@ -1,16 +1,24 @@
 package com.revature.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "squaks")
+@NoArgsConstructor
 public class Squak {
+
+    public Squak(String content){
+        id = 0;
+        this.content = content;
+        this.date = System.currentTimeMillis();
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String content;
