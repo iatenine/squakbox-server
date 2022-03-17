@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class Squak {
 
     public Squak(String content){
-        id = 0;
         this.content = content;
         this.date = System.currentTimeMillis();
     }

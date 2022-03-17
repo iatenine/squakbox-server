@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface SquakService {
     List<Squak> getAllSquaks();
-    Squak postSquak(Squak squak);
+    Squak postSquak(String content);
 }

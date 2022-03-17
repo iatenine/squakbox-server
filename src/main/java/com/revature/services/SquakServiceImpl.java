@@ -19,7 +19,8 @@ public class SquakServiceImpl implements SquakService{
     }
 
     @Override
-    public Squak postSquak(Squak squak) {
-        return null;
+    public Squak postSquak(String content) {
+        Squak squak = new Squak(content);
+        return squakRepository.save(squak);
     }
 }

@@ -33,8 +33,10 @@ class SquakServiceImplTest {
     void postSquak() {
         List<Squak> list = squakService.getAllSquaks();
         int currSize = list.size();
-        Squak testSquak = squakService.postSquak(new Squak("post test"));
+        Squak testSquak = squakService.postSquak("post test");
+        list = squakService.getAllSquaks();
         assertEquals(currSize + 1, list.size());
+        assertEquals("post test", testSquak.getContent());
         assertNotEquals(0, testSquak.getId());
     }
 }
